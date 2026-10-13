@@ -46,11 +46,11 @@ Institutions may hold attendance, academic, participation, fee, skills, and facu
 
 ## 📸 Application Screenshots
 
-The screenshots below use **relative paths from this README**. Put the image files in a folder named `screenshots` at the repository root, and use the exact filenames shown here.
+Screenshots are stored in the root-level `screenshots/` directory. The paths below match the filenames in the current project.
 
 ### Login
 
-![CampusPulse Login](./screenshots/login.png)
+![CampusPulse Login](./screenshots/Login.png)
 
 ### Staff Workspace
 
@@ -58,13 +58,13 @@ The screenshots below use **relative paths from this README**. Put the image fil
 
 Review student information, purpose-specific consent, and permitted academic signals.
 
-![Student 360](./screenshots/student-360.png)
+![Student 360](./screenshots/Student%20360.png)
 
 #### Intervention Management
 
 Track assigned support actions, responsible staff, status updates, deadlines, and follow-up notes.
 
-![Intervention Management](./screenshots/interventions.png)
+![Intervention Management](./screenshots/Intervention.png)
 
 ### Student Portal
 
@@ -72,37 +72,37 @@ Track assigned support actions, responsible staff, status updates, deadlines, an
 
 View academic summaries, attendance, deadlines, released feedback, achievements, and notifications.
 
-![Student Dashboard](./screenshots/student-dashboard.png)
+![Student Dashboard](./screenshots/StudentHome.png)
 
 #### Assignments
 
 View coursework, deadlines, submission status, and released grades.
 
-![Assignments](./screenshots/assignments.png)
+![Assignments](./screenshots/Assignments.png)
 
 #### Academics
 
 Review recorded attendance, academic averages, released grades, and assignment feedback.
 
-![Academics](./screenshots/academics.png)
+![Academics](./screenshots/Academics.png)
 
 #### Pulse Points
 
 Track earned points and review the transaction ledger, including timing and quality awards.
 
-![Pulse Points](./screenshots/pulse-points.png)
+![Pulse Points](./screenshots/MyPulsePoints.png)
 
 #### Pulse Marketplace
 
 Explore rewards, leaderboard rankings, and redemption history. Rewards marked as simulated are for demonstration purposes only.
 
-![Pulse Marketplace](./screenshots/marketplace.png)
+![Pulse Marketplace](./screenshots/Pulse%20Marketplace.png)
 
 #### Help & Support
 
 Submit support requests for human review and track their status.
 
-![Help & Support](./screenshots/help-support.png)
+![Help & Support](./screenshots/Help%26Support.png)
 
 > Screenshots show the local demonstration environment and synthetic demo data. CampusPulse is a prototype; simulated rewards have no real-world monetary value.
 
@@ -118,17 +118,6 @@ Submit support requests for human review and track their status.
 ```text
 CampusPulse/
 ├── backend/
-│   ├── app/
-│   │   ├── api/
-│   │   │   └── routes/
-│   │   ├── core/
-│   │   ├── db/
-│   │   ├── models/
-│   │   ├── schemas/
-│   │   ├── services/
-│   │   └── seed/
-│   ├── tests/
-│   └── requirements.txt
 ├── frontend/
 ├── datasets/
 ├── docs/
@@ -156,7 +145,7 @@ python -m pip install -r backend/requirements.txt
 python -m uvicorn app.main:app --app-dir backend --reload
 ```
 
-The API documentation should be available at:
+API documentation:
 
 - http://127.0.0.1:8000/docs
 
