@@ -1,0 +1,1 @@
+"""CampusPulse database infrastructure."""
