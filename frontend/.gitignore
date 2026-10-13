@@ -22,3 +22,18 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+.env.*
+
+# Keep example environment files
+!.env.example
+
+# SQLite temporary files
+*.db-wal
+*.db-shm
