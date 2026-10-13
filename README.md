@@ -1,14 +1,14 @@
 # CampusPulse
 
-**A Student Success and Intervention Orchestration Engine**
+### A Student Success and Intervention Orchestration Engine
 
-CampusPulse is a hackathon prototype for PS6. It aims to turn fragmented student-success signals into explainable, consent-aware, human-reviewed support workflows with accountable follow-up and measured outcomes.
+CampusPulse is a hackathon prototype for PS6. It connects fragmented student-success signals to explainable, consent-aware, human-reviewed support workflows, with accountable follow-up and recorded outcomes.
 
-> The core differentiator is the intervention workflow, not a risk score or dashboard alone.
+> **Core differentiator:** CampusPulse coordinates support actions and tracks what happened afterward—not just a risk score or dashboard.
 
 ## Problem
 
-Institutions may hold attendance, academic, participation, fee, skills, and faculty-feedback data but fail to coordinate timely support. CampusPulse is designed to connect those signals to an appropriate support action, a responsible stakeholder, a deadline, follow-up evidence, and an outcome record.
+Institutions may hold attendance, academic, participation, fee, skills, and faculty-feedback data without a reliable way to coordinate timely support. CampusPulse is designed to connect permitted signals to a reviewed support action, a responsible stakeholder, a deadline, follow-up evidence, and an outcome record.
 
 ## Core Workflow
 
@@ -19,97 +19,175 @@ Institutions may hold attendance, academic, participation, fee, skills, and facu
 5. Assign an intervention owner/team and deadline.
 6. Record timestamped follow-up evidence.
 7. Record outcome measurements when available.
-8. Review the resulting cohort-level analytics.
+8. Review cohort-level analytics.
 
-## Planned Features
+## Features
 
-- Student 360 across six data domains
-- Explainable early-warning indicators
-- Purpose-specific consent representation
-- Role-aware information access
+### Staff Workspace
+- Student 360 view with purpose-specific consent and permitted signals
+- Explainable early-warning/review-priority indicators
 - Context-aware support recommendations
 - Human review and manual override
-- Intervention assignments, deadlines, and escalation
-- Follow-up event history
-- Outcome measurement
-- Cohort-level analytics
-- Synthetic demonstration data
+- Intervention assignments, owners, deadlines, statuses, and follow-up history
+- Outcome recording and cohort-level analytics
+- Role-aware access and privacy-focused workflows
+
+### Student Portal
+- Student dashboard, profile, and permitted academic information
+- Assignment deadlines, submissions, released grades, and feedback
+- Pulse Points with a transaction ledger
+- Rewards marketplace, leaderboard, and redemption history
+- Notifications and human-reviewed support requests
+
+### Demo Data
+- Synthetic student cohort and curated demonstration scenarios
+- Simulated rewards clearly labelled as demo-only
+- Reproducible synthetic-data generator
+
+## 📸 Application Screenshots
+
+The screenshots below use **relative paths from this README**. Put the image files in a folder named `screenshots` at the repository root, and use the exact filenames shown here.
+
+### Login
+
+![CampusPulse Login](./screenshots/login.png)
+
+### Staff Workspace
+
+#### Student 360 — Profile, Consent & Permitted Signals
+
+Review student information, purpose-specific consent, and permitted academic signals.
+
+![Student 360](./screenshots/student-360.png)
+
+#### Intervention Management
+
+Track assigned support actions, responsible staff, status updates, deadlines, and follow-up notes.
+
+![Intervention Management](./screenshots/interventions.png)
+
+### Student Portal
+
+#### Student Dashboard
+
+View academic summaries, attendance, deadlines, released feedback, achievements, and notifications.
+
+![Student Dashboard](./screenshots/student-dashboard.png)
+
+#### Assignments
+
+View coursework, deadlines, submission status, and released grades.
+
+![Assignments](./screenshots/assignments.png)
+
+#### Academics
+
+Review recorded attendance, academic averages, released grades, and assignment feedback.
+
+![Academics](./screenshots/academics.png)
+
+#### Pulse Points
+
+Track earned points and review the transaction ledger, including timing and quality awards.
+
+![Pulse Points](./screenshots/pulse-points.png)
+
+#### Pulse Marketplace
+
+Explore rewards, leaderboard rankings, and redemption history. Rewards marked as simulated are for demonstration purposes only.
+
+![Pulse Marketplace](./screenshots/marketplace.png)
+
+#### Help & Support
+
+Submit support requests for human review and track their status.
+
+![Help & Support](./screenshots/help-support.png)
+
+> Screenshots show the local demonstration environment and synthetic demo data. CampusPulse is a prototype; simulated rewards have no real-world monetary value.
 
 ## Technology Stack
 
-**Frontend:** React, Vite, TypeScript, Tailwind CSS, Recharts
-
-**Backend:** Python 3.11, FastAPI, Pydantic, SQLAlchemy, Uvicorn
-
-**Database:** SQLite
-
-**Testing:** Pytest and HTTPX
-
-**Design source:** Google Stitch design to be supplied by the project owner.
-
-Optional AI integrations and additional infrastructure will be considered only after the core workflow works reliably.
+- **Frontend:** React, Vite, TypeScript, Recharts, Lucide
+- **Backend:** Python, FastAPI, Pydantic, SQLAlchemy, Uvicorn
+- **Database:** SQLite
+- **Testing:** Pytest and HTTPX
 
 ## Repository Layout
 
-    CampusPulse-Fresh/
-    ├── backend/
-    │   ├── app/
-    │   │   ├── api/
-    │   │   │   └── routes/
-    │   │   ├── core/
-    │   │   ├── db/
-    │   │   ├── models/
-    │   │   ├── schemas/
-    │   │   └── services/
-    │   ├── tests/
-    │   └── requirements.txt
-    ├── frontend/
-    ├── datasets/
-    │   ├── raw/
-    │   ├── processed/
-    │   └── synthetic/
-    ├── docs/
-    └── notebooks/
+```text
+CampusPulse/
+├── backend/
+│   ├── app/
+│   │   ├── api/
+│   │   │   └── routes/
+│   │   ├── core/
+│   │   ├── db/
+│   │   ├── models/
+│   │   ├── schemas/
+│   │   ├── services/
+│   │   └── seed/
+│   ├── tests/
+│   └── requirements.txt
+├── frontend/
+├── datasets/
+├── docs/
+├── notebooks/
+├── screenshots/
+└── README.md
+```
 
-The structure describes the intended project layout. Some components will be populated during subsequent implementation chapters.
+## Run Locally
 
-## Documentation
+### Requirements
 
-- `docs/acceptance-checklist.md` — PS6 acceptance requirements
-- `docs/demo-scenario.md` — synthetic hero-student workflow
-- `docs/role-permission-matrix.md` — intended role permissions
-- `docs/data-model.md` — initial database entities and relationships
-- `docs/privacy-and-consent-rules.md` — privacy and consent behavior
-- `docs/api-contract.md` — planned endpoint contracts
-- `docs/architecture.md` — architecture and implementation principles
+- Python 3.11
+- Node.js LTS and npm
+- Git
+- Conda is optional if you prefer an isolated Python environment
 
-## Development Environment
+### 1. Start the backend
 
-The project is being developed on Windows using VS Code, PowerShell, and a dedicated Conda environment named `campuspulse-fresh` with Python 3.11.
+From the repository root, activate your environment and install backend dependencies:
 
-### Backend
+```powershell
+conda activate campuspulse-fresh
+python -m pip install -r backend/requirements.txt
+python -m uvicorn app.main:app --app-dir backend --reload
+```
 
-From the project root, activate the environment:
+The API documentation should be available at:
 
-    conda activate campuspulse-fresh
+- http://127.0.0.1:8000/docs
 
-Install the backend dependencies:
+### 2. Start the frontend
 
-    python -m pip install -r backend/requirements.txt
+Open a second terminal:
 
-Run the API:
+```powershell
+cd frontend
+npm ci
+npm run dev
+```
 
-    python -m uvicorn app.main:app --app-dir backend --reload
+Open the local URL printed by Vite in the terminal (commonly `http://localhost:5173`).
 
-Open the interactive API documentation:
+## Synthetic Cohort Generator
 
-    http://127.0.0.1:8000/docs
+With the project environment active:
 
-The exact health endpoint will be aligned with the documented `/api/health` contract during API implementation.
+```powershell
+cd backend
+python -m app.seed.seed_large_dataset --count 2000
+```
 
-### Frontend
+The count is the target number of generated `CP-SYN-*` students; curated `CP-DEMO-*` students are kept separately. The generator creates fictional students and synthetic signals. These records are not real institutional data or evidence of real-world outcomes.
 
-The frontend directory will be scaffolded with Vite when frontend setup begins. Once it exists, frontend installation and startup commands will be documented here.
+## Demo Accounts and Security
+
+If demo accounts are enabled in your local configuration, use only the dedicated local demo accounts documented for your current project setup. Do not publish private credentials.
+
+**Prototype security limitations:** before any public or real-institution deployment, review and complete authentication/session enforcement, privileged-role assignment, rate limiting, HTTPS, account recovery, audit logging, and data-protection controls. Use synthetic data only until the security model has been fully reviewed.
 
 ## Responsible Design
 
@@ -122,136 +200,14 @@ The frontend directory will be scaffolded with Vite when frontend setup begins. 
 - Distinguish illustrative examples from recorded outcomes.
 - Avoid unsupported causal claims about intervention effectiveness.
 
+## Documentation
+
+See the `docs/` directory for project documentation, including the acceptance checklist, demo scenario, role-permission matrix, data model, privacy and consent rules, API contract, and architecture notes.
+
 ## Project Status
 
-The project is being built incrementally from a clean directory. The initial FastAPI and SQLite connection setup exists; the complete data model, intervention workflow, API implementation, and frontend are still planned implementation work.
+CampusPulse is a working hackathon prototype. Features and integrations should be evaluated against the current code and demo environment; this README does not imply that every planned production capability is complete.
 
 ## License
 
 No license has been selected yet.
-
-
-## Synthetic cohort generator
-
-The repository includes an additive, reproducible synthetic-data generator. With the
-`campuspulse-fresh` environment active:
-
-```powershell
-cd backend
-python -m app.seed.seed_large_dataset --count 2000
-```
-
-The count is the target number of `CP-SYN-*` generated students (the three curated
-`CP-DEMO-*` students are kept separately). The generator adds varied fictional
-students with six domain signals and purpose-specific demo consent states. It does
-not overwrite the curated hero scenario. Generated records are not real institutional
-data or evidence of real-world outcomes.
-
-The student directory displays ten rows per page to keep the browser responsive
-when the synthetic cohort is expanded.
-
-
-## Database-backed demo login
-
-The login form verifies credentials against the SQLite `auth_users` table. On first backend startup, six local demo accounts are created automatically.
-
-Password for all demo accounts: `CampusPulse@123`
-
-- `hod@campuspulse.demo`
-- `faculty@campuspulse.demo`
-- `mentor@campuspulse.demo`
-- `counsellor@campuspulse.demo`
-- `finance@campuspulse.demo`
-- `placement@campuspulse.demo`
-
-Choose the matching role in the sign-in selector. These are shared local prototype credentials, not production accounts. Do not expose the demo-account endpoint or these credentials in a deployed environment. The login endpoint verifies database credentials, but the existing data APIs still use the prototype `X-Demo-Role` header and must be upgraded to enforce authenticated sessions before production use.
-
-## Open registration and database-backed login
-
-The login screen now supports both **Sign in** and **Create an account**. New accounts are stored in `backend/data/campuspulse.db` (`auth_users` table). Registration accepts a full name, unique email, password (8–256 characters), and one of the six supported demo roles: `hod`, `faculty`, `mentor`, `counsellor`, `finance`, or `placement`. Passwords are stored as salted PBKDF2-HMAC-SHA256 hashes, not plaintext. Duplicate emails are rejected. After registration, the new user is signed in and routed to the workspace for the selected role.
-
-### API endpoints
-- `POST /api/auth/register` — create an account.
-- `POST /api/auth/login` — verify registered credentials and selected role.
-
-### Important prototype security limitations
-- This is open registration: anyone who can reach the app can create an account and select a role, including HOD. Do not expose this prototype to the public internet.
-- The API currently returns a random demo access token, but the token is not persisted/validated as a server-side session and does not yet secure every data endpoint. Existing data APIs still rely on `X-Demo-Role` headers. Do not use real student data or treat role selection as authorization.
-- Before deployment, implement verified identity, server-side session/token validation, role assignment policies (especially privileged roles), rate limiting, HTTPS, CSRF/session protections as appropriate, account recovery, and audit logging.
-- Demo accounts are seeded at startup for the original walkthrough. You can use registration to create your own separate accounts; keep demo credentials private and remove them before any real deployment.
-
-Run backend from the project root:
-```powershell
-conda activate campuspulse
-python -m uvicorn app.main:app --app-dir backend --reload
-```
-Run frontend in another terminal:
-```powershell
-cd frontend
-npm ci
-npm run dev
-```
-
-## 📸 CampusPulse — Application Screenshots
-
-CampusPulse provides separate workspaces for institutional staff and students, connecting student-success monitoring with human-reviewed interventions and a dedicated student learning experience.
-
-### 🔐 Login
-
-![CampusPulse Login](screenshots/login.png)
-
-### 🏫 Staff Workspace
-
-#### Student 360 — Profile, Consent & Permitted Signals
-
-Review student information, purpose-specific consent and permitted academic signals.
-
-![Student 360](screenshots/student-360.png)
-
-#### Intervention Management
-
-Track assigned support actions, responsible staff, status updates, deadlines and follow-up notes.
-
-![Intervention Management](screenshots/interventions.png)
-
-### 🎓 Student Portal
-
-#### Student Dashboard
-
-Students can view their academic summary, attendance, upcoming deadlines, released feedback, achievements and notifications.
-
-![Student Dashboard](screenshots/student-dashboard.png)
-
-#### Assignments
-
-View coursework, submission status, deadlines and released grades.
-
-![Assignments](screenshots/assignments.png)
-
-#### Academics
-
-Review recorded attendance, academic averages, released grades and assignment feedback.
-
-![Academics](screenshots/academics.png)
-
-#### Pulse Points
-
-Track earned points and review the transaction ledger, including timing and quality awards.
-
-![Pulse Points](screenshots/pulse-points.png)
-
-#### Pulse Marketplace
-
-Explore rewards, leaderboard rankings and redemption history. Rewards marked as simulated are for demonstration purposes only.
-
-![Pulse Marketplace](screenshots/marketplace.png)
-
-#### Help & Support
-
-Submit support requests for human review and track their status.
-
-![Help & Support](screenshots/help-support.png)
-
----
-
-*Screenshots show the local demonstration environment and synthetic demo data. CampusPulse is a prototype; simulated rewards have no real-world monetary value.*
