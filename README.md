@@ -191,3 +191,67 @@ cd frontend
 npm ci
 npm run dev
 ```
+
+## 📸 CampusPulse — Application Screenshots
+
+CampusPulse provides separate workspaces for institutional staff and students, connecting student-success monitoring with human-reviewed interventions and a dedicated student learning experience.
+
+### 🔐 Login
+
+![CampusPulse Login](screenshots/login.png)
+
+### 🏫 Staff Workspace
+
+#### Student 360 — Profile, Consent & Permitted Signals
+
+Review student information, purpose-specific consent and permitted academic signals.
+
+![Student 360](screenshots/student-360.png)
+
+#### Intervention Management
+
+Track assigned support actions, responsible staff, status updates, deadlines and follow-up notes.
+
+![Intervention Management](screenshots/interventions.png)
+
+### 🎓 Student Portal
+
+#### Student Dashboard
+
+Students can view their academic summary, attendance, upcoming deadlines, released feedback, achievements and notifications.
+
+![Student Dashboard](screenshots/student-dashboard.png)
+
+#### Assignments
+
+View coursework, submission status, deadlines and released grades.
+
+![Assignments](screenshots/assignments.png)
+
+#### Academics
+
+Review recorded attendance, academic averages, released grades and assignment feedback.
+
+![Academics](screenshots/academics.png)
+
+#### Pulse Points
+
+Track earned points and review the transaction ledger, including timing and quality awards.
+
+![Pulse Points](screenshots/pulse-points.png)
+
+#### Pulse Marketplace
+
+Explore rewards, leaderboard rankings and redemption history. Rewards marked as simulated are for demonstration purposes only.
+
+![Pulse Marketplace](screenshots/marketplace.png)
+
+#### Help & Support
+
+Submit support requests for human review and track their status.
+
+![Help & Support](screenshots/help-support.png)
+
+---
+
+*Screenshots show the local demonstration environment and synthetic demo data. CampusPulse is a prototype; simulated rewards have no real-world monetary value.*
