@@ -176,6 +176,11 @@ The count is the target number of generated `CP-SYN-*` students; curated `CP-DEM
 
 If demo accounts are enabled in your local configuration, use only the dedicated local demo accounts documented for your current project setup. Do not publish private credentials.
 
+FOR LOGIN :- USE THIS DEMO HOD CREDENTIALS :- 
+      E-Mail :- hod@campuspulse.demo
+      Pass :- CampusPulse@123
+      Selected Role :- HOD
+
 **Prototype security limitations:** before any public or real-institution deployment, review and complete authentication/session enforcement, privileged-role assignment, rate limiting, HTTPS, account recovery, audit logging, and data-protection controls. Use synthetic data only until the security model has been fully reviewed.
 
 ## Responsible Design
